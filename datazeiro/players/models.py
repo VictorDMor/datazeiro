@@ -6,6 +6,9 @@ class Country(models.Model):
 	name = models.CharField(max_length=100)
 	abbreviation = models.CharField(max_length=3)
 
+	def __str__(self):
+		return self.name
+
 class Player(models.Model):
 	first_name = models.CharField(max_length=200)
 	second_name = models.CharField(max_length=200)
@@ -16,3 +19,6 @@ class Player(models.Model):
 	assists = models.IntegerField(default=0)
 	height = models.IntegerField(default=0)
 	weight = models.IntegerField(default=0)
+
+	def __str__(self):
+		return self.known_as
